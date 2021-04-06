@@ -1,10 +1,10 @@
 ---
 thumbnail: "/uploads/ian-dooley-281897-unsplash.jpg"
-title: Ice Cream
-date: 2019-01-04
+title: 冰淇淋
+date: 2021-04-06
 categories:
-- photography
-- yellow
+- 照片
+- 黄色
 project_bg_color: ''
 project_fg_color: "#FDC70D"
 

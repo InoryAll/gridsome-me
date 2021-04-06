@@ -28,6 +28,7 @@ query Posts {
         id
         path
         title
+        subtitle
       }
     }
   }

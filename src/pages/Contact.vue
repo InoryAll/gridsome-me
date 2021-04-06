@@ -3,29 +3,29 @@
     <div class="container">
 
       <div class="contact-header">
-        <h1 class="contact-title">Say hi!</h1>
-        <p>Leave me a note with any questions you might have, I'll get back to you as soon as possible.</p>
+        <h1 class="contact-title">你好!</h1>
+        <p>有问题请联系我...</p>
       </div>
 
-      <form class="contact-form" name="contact">
+      <form class="contact-form" name="contact" @submit.prevent="submitForm">
 
         <div class="sender-info">
           <div>
-            <label for="name" class="label">Your name</label>
-            <input type="text" name="name" />
+            <label for="name" class="label">姓名</label>
+            <input v-model="name" type="text" name="name" />
           </div>
           <div>
-            <label for="email" class="label">Your email</label>
-            <input type="email" name="email" />
+            <label for="email" class="label">邮箱</label>
+            <input v-model="email" type="email" name="email" />
           </div>
         </div>
 
         <div class="message">
-          <label for="message" class="label">Message</label>
-          <textarea name="message"></textarea>
+          <label for="message" class="label">内容</label>
+          <textarea v-model="content" name="message"></textarea>
         </div>
 
-        <button class="button">Submit form</button>
+        <button class="button">提交</button>
 
       </form>
 
@@ -34,7 +34,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      content: ''
+    };
+  },
+  methods: {
+    submitForm() {
+      console.log('submit');
+    }
+  },
+}
 </script>
 
 <style scoped>

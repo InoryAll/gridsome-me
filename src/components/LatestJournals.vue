@@ -1,12 +1,13 @@
 <template>
     <div>
         <div class="latest-journals-heading container">
-        <span class="label">Latest and greatest</span>
+        <span class="label">最新文章</span>
         </div>
         <div class="latest-journals">
         <div class="container">
             <g-link :to="item.node.path" class="journal" v-for="item in journals" :key="item.node.id">
               <h3 class="journal-title">{{ item.node.title }}</h3>
+              <p class="journal-subtitle">{{ item.node.subtitle }}</p>
             </g-link>
         </div>
         </div>
@@ -61,6 +62,10 @@ export default {
 .journal-title {
   font-size: 1rem;
   line-height: 1.35;
+}
+.journal-subtitle{
+  font-size: 0.8rem;
+  color: var(--color-contrast-1);
 }
 
 @media (min-width: 580px) {

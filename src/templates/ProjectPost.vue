@@ -10,7 +10,7 @@
 
             <div class="categories-container">
               <div class="categories">
-                <span class="label">Categories</span>
+                <span class="label">分类</span>
                 <span 
                   class="category"
                   v-for="(category, index) in $page.post.categories" 
@@ -21,7 +21,7 @@
             </div>
 
             <div class="year-container">
-              <span class="label">Year</span>
+              <span class="label">年份</span>
               <div v-html="$page.post.date"/>
             </div>
           </div>
