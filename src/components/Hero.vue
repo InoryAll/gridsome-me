@@ -1,17 +1,37 @@
 <template>
     <div class="hero">
-        <h1 class="hero-title" v-html="settings.hero_title" />
-        <h2 class="hero-subtitle" v-html="settings.hero_subtitle" />
+        <h1 class="hero-title" v-html="settings.title" />
+        <h2 class="hero-subtitle" v-html="settings.subtitle" />
     </div>
 </template>
+
+<static-query>
+query {
+  generals: allStrapiGeneral {
+    edges {
+      node {
+        id
+        title
+        subtitle
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 export default {
   data() {
     return {
-      settings: require("../../data/theme.json")
     }
-  }
+  },
+  computed: {
+    settings() {
+      return {
+        ...this.$static.generals.edges[0].node
+      };
+    }
+  },
 }
 </script>
 
