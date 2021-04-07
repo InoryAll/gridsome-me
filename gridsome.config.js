@@ -2,6 +2,7 @@
 // Learn more: https://gridsome.org/docs/config
 
 // 使用本地markdown数据源
+// 同时使用strapi管理部分动态信息
 
 module.exports = {
   siteName: "trj",
@@ -37,9 +38,9 @@ module.exports = {
     {
       use: '@gridsome/source-strapi',
       options: {
-        apiURL: 'http://localhost:1337',
+        apiURL: 'http://106.75.78.167:1337',
         queryLimit: 1000, // Defaults to 100
-        // contentTypes: ['article', 'user'],
+        // contentTypes: ['journal', 'project'],
         singleTypes: ['general'],
         // Possibility to login with a Strapi user,
         // when content types are not publicly available (optional).
